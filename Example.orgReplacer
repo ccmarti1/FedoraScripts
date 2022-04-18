@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#DIR1="/home/student/Scripts/TestKit/Test1"
+#Result=$( dirname "$PATH")
+cp /var/named/example.org.db /var/named/God.org.db
+cp /var/named/example.org.rev /var/named/God.org.rev
+cp /etc/named.conf /etc/named.conf.God
+
+
+sed -i 's/example.org/God/g' /var/named/God.org.db
+sed -i 's/example.org/God/g' /var/named/God.org.rev
+sed -i 's/example.org/God/g' /etc/named.conf.God
